@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="6dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shadow_left_xml"
+        app:layout_constraintBottom_toTopOf="@id/userImageView"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImageView"
+        android:layout_width="111px"
+        android:layout_height="111px"
+        android:layout_margin="8dp"
+        android:src="@drawable/lewandowski"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="lewandowski"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/userImageView"
+        app:layout_constraintStart_toEndOf="@+id/userImageView"
+        app:layout_constraintTop_toTopOf="@+id/userImageView" />
+
+    <ImageView
+        android:id="@+id/icon_more"
+        android:layout_width="14dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/moremore"
+        app:layout_constraintBottom_toTopOf="@+id/big_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toEndOf="@+id/usernameTop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+
+    <ImageView
+        android:layout_marginTop="6dp"
+        android:id="@+id/big_image"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lewandowski"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImageView" />
+
+
+    <ImageView
+
+        android:id="@+id/heart_ic"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/big_image"
+        app:srcCompat="@drawable/like_insta" />
+
+    <ImageView
+
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/commentary_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/heart_ic"
+        app:layout_constraintTop_toBottomOf="@+id/big_image"
+        app:srcCompat="@drawable/commente" />
+
+
+    <ImageView
+
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/telegram_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/commentary_ic"
+        app:layout_constraintTop_toBottomOf="@+id/big_image"
+        app:srcCompat="@drawable/telegram" />
+
+
+    <ImageView
+
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintTop_toBottomOf="@+id/big_image"
+        app:srcCompat="@drawable/save_ic" />
+
+    <TextView
+        android:id="@+id/tv_number_of_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="2dp"
+        android:textStyle="bold"
+        android:text="0 likes "
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heart_ic" />
+
+    <TextView
+        android:id="@+id/username_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="lewandowski"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number_of_likes" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="2dp"
+        android:scrollHorizontally="false"
+        android:text="как нdddddddd dd ddddddd ddd"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:breakStrategy="balanced"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/username_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number_of_likes"
+         />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
